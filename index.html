@@ -21,40 +21,6 @@
 
     </div>
     <script src="javascript.js"></script>
-    <script>
-        let button=document.querySelector('.button');
-let clearBtn=document.querySelector('.clear');
-let container=document.querySelector('.container');
-
-let input=document.querySelector('input');
-
-function makeGrid(){
-    let size=input.value;
-    container.textContent='';
-    let cellSize=Math.floor((container.clientWidth)/size);
-    for(let i=1;i<=size;i++){
-        let div1=document.createElement('div');
-        div1.classList.add('one');
-        for(let j=1;j<=size;j++){
-            let div2=document.createElement('div');
-            div2.classList.add('two');
-            div2.style.width=`${cellSize}px`;
-            div2.style.height=`${cellSize}px`;
-            div2.addEventListener('mouseover', function(){
-                div2.style.backgroundColor='black';
-            });
-            clearBtn.addEventListener('click', function(){
-                div2.style.backgroundColor='';
-                div2.style.opacity='';
-            });
-            div1.appendChild(div2);
-        }
-        container.appendChild(div1);
-    }
-    input.textContent='';
-}
-
-button.addEventListener('click', makeGrid);
-    </script>
+    
 </body>
 </html>
